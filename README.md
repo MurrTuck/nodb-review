@@ -37,6 +37,8 @@
 
 ### Wireframe
 
-<img src= "./screenshots/caputure1.png">
-<img src= "./screenshots/caputure2.png">
-<img src= "./screenshots/caputure3.png">
+<img src= "./screenshots/capture1.png">
+<img src= "./screenshots/capture2.png">
+<img src= "./screenshots/capture3.png">
+
+
