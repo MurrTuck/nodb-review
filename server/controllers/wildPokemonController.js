@@ -7,7 +7,7 @@ module.exports = {
         const rand2 = Math.ceil(Math.random() * 151)
         const rand3 = Math.ceil(Math.random() * 151)
 
-        const baseUrl = 'https://pokiapi.co/api/v2/pokemon/'
+        const baseUrl = 'https://pokeapi.co/api/v2/pokemon/'
 
         axios.get(baseUrl + rand1).then((response1) => {
             wildPokemonArray.push(response1.data)
@@ -22,5 +22,5 @@ module.exports = {
                 })
             })
         })
-    }
+    },
 }

@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Header from './components/Header'
 import Finder from './components/Finder'
 import Pokedex from './components/Pokedex'
 import axios from 'axios'
-import './App.css';
+import './App.css'
 
 class App extends Component {
   constructor() {
     super()
-
     this.state = {
       caughtPokemon: [],
     }
@@ -18,8 +17,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // console.log('I am Mounted')
-    axios.get('/api/pokemon').then(res => {
+    axios.get('/api/pokemon').then((res) => {
       this.setState({
         caughtPokemon: res.data,
       })
@@ -40,7 +38,7 @@ class App extends Component {
 
     axios.put(`/api/pokemon/${id}`, body).then((res) => {
       this.setState({
-        caughtPokemon: res.data
+        caughtPokemon: res.data,
       })
     })
   }
@@ -53,20 +51,19 @@ class App extends Component {
     })
   }
 
-
   render() {
-    return (<div className="App">
-      <Header />
-      App.js
-      <Finder catchPokemon={this.catchPokemon} />
-      <Pokedex
-        caughtPokemon={this.state.caughtPokemon}
-        saveName={this.saveName}
-        releasePokemon={this.releasePokemon}
-      />
-    </div>
+    return (
+      <div className="App">
+        <Header />
+        <Finder catchPokemon={this.catchPokemon} />
+        <Pokedex
+          caughtPokemon={this.state.caughtPokemon}
+          saveName={this.saveName}
+          releasePokemon={this.releasePokemon}
+        />
+      </div>
     )
   }
 }
 
-export default App;
+export default App

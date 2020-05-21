@@ -1,7 +1,11 @@
 import React from 'react'
 
 function Header(props) {
-    return <header><H1>Gotta Catch em All</H1></header>
+    return (
+        <header>
+            <h1>Gotta Catch 'Em All</h1>
+        </header>
+    )
 }
 
 export default Header
